@@ -1,0 +1,30 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: contas-db
+    environment:
+      POSTGRES_DB: contasdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - contas-net
+
+  app:
+    build: .
+    container_name: contas-api
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    networks:
+      - contas-net
+
+volumes:
+  postgres_data:
+
+networks:
+  contas-net:
