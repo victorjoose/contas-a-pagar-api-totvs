@@ -42,6 +42,7 @@ public class ContaService {
         Conta conta = contaRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Conta não encontrada"));
         conta.setSituacao(situacao);
+        conta.setDataPagamento(LocalDate.now());
         return mapToResponse(contaRepository.save(conta));
     }
 

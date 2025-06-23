@@ -80,11 +80,14 @@ class ContaServiceTest {
   void deveAlterarSituacao() {
     when(contaRepository.findById(1L)).thenReturn(Optional.of(conta));
     conta.setSituacao(Situacao.PENDENTE);
+    conta.setDataPagamento(LocalDate.now());
     when(contaRepository.save(any(Conta.class))).thenReturn(conta);
 
     ContaResponseDTO response = contaService.alterarSituacao(1L, Situacao.PAGA);
 
     assertEquals(Situacao.PAGA, response.getSituacao());
+    assertEquals(LocalDate.now(), response.getDataPagamento());
+
     verify(contaRepository).save(any(Conta.class));
 
     System.out.println("✅ deveAlterarSituacao passou");
