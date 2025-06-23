@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "478c9533-f01a-40ef-b681-48593061adff",
+		"name": "Contas a Pagar API (Desafio TOTVS)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30631357"
+	},
+	"item": [
+		{
+			"name": "Criar Conta",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3NlQGVtYWlsLmNvbSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzUwNjQzMTQwLCJleHAiOjE3NTA2NDY3NDB9.EB5Nsbe6Xzihmj1xU4PbZLFR3odH75Y4qGqilVmJCyk"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"dataVencimento\": \"2025-07-01\",\n  \"dataPagamento\": \"2025-07-30\",\n  \"valor\": 1500.0,\n  \"descricao\": \"Financiamento\",\n  \"situacao\": \"PENDENTE\"\n}"
+				},
+				"url": "localhost:8080/api/contas"
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Conta",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3NlQGVtYWlsLmNvbSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzUwNjQyMzE1LCJleHAiOjE3NTA2NDU5MTV9.BBgPesbFsI-VOTXpFG0dSpCYKHj-Tc8W3SKyJnTcnqc"
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"dataVencimento\": \"2025-07-01\",\n  \"dataPagamento\": \"2025-07-03\",\n  \"valor\": 160.0,\n  \"descricao\": \"Internet Atualizada\",\n  \"situacao\": \"PAGA\"\n}"
+				},
+				"url": "localhost:8080/api/contas/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar Situação da Conta",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3NlQGVtYWlsLmNvbSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzUwNjQyMzE1LCJleHAiOjE3NTA2NDU5MTV9.BBgPesbFsI-VOTXpFG0dSpCYKHj-Tc8W3SKyJnTcnqc"
+					}
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"situacao\": \"PAGA\"\n}"
+				},
+				"url": "localhost:8080/api/contas/1/situacao"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Contas com Filtro",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3NlQGVtYWlsLmNvbSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzUwNjQ3NjM5LCJleHAiOjE3NTA2NTEyMzl9.U9Q2VfiOBGkYob0dO2eTNOHgPmpq_N5S-9cUrtL6PMQ"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/contas?descricao=internet&inicio=2025-07-01&fim=2025-07-31&size=2&page=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"contas"
+					],
+					"query": [
+						{
+							"key": "descricao",
+							"value": "internet"
+						},
+						{
+							"key": "inicio",
+							"value": "2025-07-01"
+						},
+						{
+							"key": "fim",
+							"value": "2025-07-31"
+						},
+						{
+							"key": "size",
+							"value": "2"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Conta por ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3NlQGVtYWlsLmNvbSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzUwNjQ3NjM5LCJleHAiOjE3NTA2NTEyMzl9.U9Q2VfiOBGkYob0dO2eTNOHgPmpq_N5S-9cUrtL6PMQ"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/contas/20"
+			},
+			"response": []
+		},
+		{
+			"name": "Valor Total Pago por Período",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3NlQGVtYWlsLmNvbSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzUwNjQ3NjM5LCJleHAiOjE3NTA2NTEyMzl9.U9Q2VfiOBGkYob0dO2eTNOHgPmpq_N5S-9cUrtL6PMQ"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/contas/valor-total?inicio=2025-07-01&fim=2025-07-02",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"contas",
+						"valor-total"
+					],
+					"query": [
+						{
+							"key": "inicio",
+							"value": "2025-07-01"
+						},
+						{
+							"key": "fim",
+							"value": "2025-07-02"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Importar Contas via CSV",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3NlQGVtYWlsLmNvbSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzUwNjQzMTQwLCJleHAiOjE3NTA2NDY3NDB9.EB5Nsbe6Xzihmj1xU4PbZLFR3odH75Y4qGqilVmJCyk"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/E:/Downloads/contas_teste.csv"
+						}
+					]
+				},
+				"url": "localhost:8080/api/contas/importar"
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Usuário",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"José Farias\",\r\n  \"email\": \"jose@email.com\",\r\n  \"senha\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Fazer Login (autenticar)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"jose@email.com\",\r\n  \"senha\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/auth/login"
+			},
+			"response": []
+		}
+	]
+}
