@@ -7,21 +7,21 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
       - contas-net
 
-  app:
-    build: .
-    container_name: contas-api
-    ports:
-      - "8080:8080"
-    depends_on:
-      - postgres
-    networks:
-      - contas-net
+#  app:
+#    build: .
+#    container_name: contas-api
+#    ports:
+#      - "8080:8080"
+#    depends_on:
+#      - postgres
+#    networks:
+#      - contas-net
 
 volumes:
   postgres_data:
