@@ -1,5 +1,6 @@
-package com.josefarias.contasapagar.domain.model;
+package com.josefarias.contasapagar.domain.entity;
 
+import com.josefarias.contasapagar.domain.enums.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

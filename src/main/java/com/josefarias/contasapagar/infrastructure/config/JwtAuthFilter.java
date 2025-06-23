@@ -1,7 +1,7 @@
-package com.josefarias.contasapagar.config;
+package com.josefarias.contasapagar.infrastructure.config;
 
-import com.josefarias.contasapagar.repository.UsuarioRepository;
-import com.josefarias.contasapagar.service.JwtService;
+import com.josefarias.contasapagar.domain.repository.UsuarioRepository;
+import com.josefarias.contasapagar.application.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

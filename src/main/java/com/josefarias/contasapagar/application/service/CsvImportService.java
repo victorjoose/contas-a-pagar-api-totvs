@@ -1,8 +1,8 @@
-package com.josefarias.contasapagar.service;
+package com.josefarias.contasapagar.application.service;
 
-import com.josefarias.contasapagar.domain.model.Conta;
-import com.josefarias.contasapagar.domain.model.Situacao;
-import com.josefarias.contasapagar.repository.ContaRepository;
+import com.josefarias.contasapagar.domain.entity.Conta;
+import com.josefarias.contasapagar.domain.enums.Situacao;
+import com.josefarias.contasapagar.domain.repository.ContaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;

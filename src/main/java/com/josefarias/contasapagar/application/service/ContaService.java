@@ -1,10 +1,10 @@
-package com.josefarias.contasapagar.service;
+package com.josefarias.contasapagar.application.service;
 
-import com.josefarias.contasapagar.domain.model.Conta;
-import com.josefarias.contasapagar.domain.model.Situacao;
-import com.josefarias.contasapagar.dto.ContaRequestDTO;
-import com.josefarias.contasapagar.dto.ContaResponseDTO;
-import com.josefarias.contasapagar.repository.ContaRepository;
+import com.josefarias.contasapagar.domain.entity.Conta;
+import com.josefarias.contasapagar.domain.enums.Situacao;
+import com.josefarias.contasapagar.application.dto.ContaRequestDTO;
+import com.josefarias.contasapagar.application.dto.ContaResponseDTO;
+import com.josefarias.contasapagar.domain.repository.ContaRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.*;
@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor

@@ -1,6 +1,6 @@
-package com.josefarias.contasapagar.repository;
+package com.josefarias.contasapagar.domain.repository;
 
-import com.josefarias.contasapagar.domain.model.Usuario;
+import com.josefarias.contasapagar.domain.entity.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

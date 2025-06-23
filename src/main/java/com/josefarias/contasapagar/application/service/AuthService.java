@@ -1,11 +1,11 @@
-package com.josefarias.contasapagar.service;
+package com.josefarias.contasapagar.application.service;
 
-import com.josefarias.contasapagar.domain.model.Role;
-import com.josefarias.contasapagar.domain.model.Usuario;
-import com.josefarias.contasapagar.dto.AuthRequestDTO;
-import com.josefarias.contasapagar.dto.RegisterRequestDTO;
-import com.josefarias.contasapagar.dto.TokenResponseDTO;
-import com.josefarias.contasapagar.repository.UsuarioRepository;
+import com.josefarias.contasapagar.domain.enums.Role;
+import com.josefarias.contasapagar.domain.entity.Usuario;
+import com.josefarias.contasapagar.application.dto.AuthRequestDTO;
+import com.josefarias.contasapagar.application.dto.RegisterRequestDTO;
+import com.josefarias.contasapagar.application.dto.TokenResponseDTO;
+import com.josefarias.contasapagar.domain.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

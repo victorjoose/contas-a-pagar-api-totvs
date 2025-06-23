@@ -1,6 +1,6 @@
-package com.josefarias.contasapagar.repository;
+package com.josefarias.contasapagar.domain.repository;
 
-import com.josefarias.contasapagar.domain.model.Conta;
+import com.josefarias.contasapagar.domain.entity.Conta;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

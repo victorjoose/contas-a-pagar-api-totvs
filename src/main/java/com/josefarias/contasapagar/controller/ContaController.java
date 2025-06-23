@@ -1,10 +1,10 @@
 package com.josefarias.contasapagar.controller;
 
-import com.josefarias.contasapagar.dto.AlterarSituacaoDTO;
-import com.josefarias.contasapagar.dto.ContaRequestDTO;
-import com.josefarias.contasapagar.dto.ContaResponseDTO;
-import com.josefarias.contasapagar.service.ContaService;
-import com.josefarias.contasapagar.service.CsvImportService;
+import com.josefarias.contasapagar.application.dto.AlterarSituacaoDTO;
+import com.josefarias.contasapagar.application.dto.ContaRequestDTO;
+import com.josefarias.contasapagar.application.dto.ContaResponseDTO;
+import com.josefarias.contasapagar.application.service.ContaService;
+import com.josefarias.contasapagar.application.service.CsvImportService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

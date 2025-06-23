@@ -1,13 +1,15 @@
-package com.josefarias.contasapagar.dto;
+package com.josefarias.contasapagar.application.dto;
 
-import com.josefarias.contasapagar.domain.model.Situacao;
+import com.josefarias.contasapagar.domain.enums.Situacao;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 public class ContaResponseDTO {
     private Long id;

@@ -1,9 +1,11 @@
-package com.josefarias.contasapagar.dto;
+package com.josefarias.contasapagar.application.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 public class TokenResponseDTO {
   private String token;

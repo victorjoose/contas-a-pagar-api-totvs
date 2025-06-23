@@ -1,12 +1,17 @@
-package com.josefarias.contasapagar.domain.model;
+package com.josefarias.contasapagar.domain.entity;
 
+import com.josefarias.contasapagar.domain.enums.Situacao;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "contas")
 public class Conta {

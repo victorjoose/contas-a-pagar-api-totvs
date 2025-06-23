@@ -1,6 +1,6 @@
-package com.josefarias.contasapagar.service;
+package com.josefarias.contasapagar.application.service;
 
-import com.josefarias.contasapagar.domain.model.Usuario;
+import com.josefarias.contasapagar.domain.entity.Usuario;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
