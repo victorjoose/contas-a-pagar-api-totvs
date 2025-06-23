@@ -7,7 +7,7 @@ API REST desenvolvida como parte do **Desafio Backend TOTVS 2024**. O sistema pe
 ## 🚀 Tecnologias Utilizadas
 
 - Java 17
-- Spring Boot 3.2+
+- Spring Boot 3.5
 - Spring Security + JWT
 - Spring Data JPA
 - PostgreSQL
@@ -26,6 +26,9 @@ API REST desenvolvida como parte do **Desafio Backend TOTVS 2024**. O sistema pe
 ### Passo a passo
 
 ```bash
+# Construir o projeto (gerar o .jar)
+./mvnw clean package
+
 # Subir toda a aplicação e banco de dados
 docker-compose up --build
 ```
